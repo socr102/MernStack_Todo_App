@@ -4,6 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+In this first part of this series we’re going to complete the setup the React project for building the front-end part of the MERN stack sample application
+
 In the project directory, you can run:
 
 ### `npm start`
