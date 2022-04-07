@@ -1,9 +1,7 @@
 import React,{useEffect} from "react";
 import {Navbar, Container, Nav} from "react-bootstrap";
 function NavBar() {
-  useEffect(()=>{
-    console.log("NavBar!");
-  },[]);
+
   return (
     <>
         <Navbar bg="light" expand="lg">
