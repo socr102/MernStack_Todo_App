@@ -18,9 +18,9 @@ function TodosList() {
       const items =  todos.map(
         (todo,idx) => 
           <tr key={idx}>
-            <td>{todo.todo_description}</td>
-            <td>{todo.todo_responsible}</td>
-            <td>{todo.todo_priority}</td>
+            <td className={todo.todo_completed? "completed":""}>{todo.todo_description}</td>
+            <td className={todo.todo_completed? "completed":""}>{todo.todo_responsible}</td>
+            <td className={todo.todo_completed? "completed":""}>{todo.todo_priority}</td>
             <td><Link to={"/edit/"+todo._id}>Edit</Link></td>
           </tr>
       );
