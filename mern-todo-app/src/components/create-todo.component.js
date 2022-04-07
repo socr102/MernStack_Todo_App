@@ -1,4 +1,5 @@
 import React ,{ useState } from "react";
+import axios from 'axios';
 function CreateTodo() {
   const [description, setDescription] = useState("");
   const [responsible, setResponsible] = useState("");
@@ -6,7 +7,20 @@ function CreateTodo() {
   const [completed, setCompleted] = useState(false);
 
   const onSubmit = () => {
-    alert("dfd");
+    const newTodo = {
+      todo_description: description,
+      todo_responsible: responsible,
+      todo_priority: priority,
+      todo_completed: completed
+    }
+
+    axios.post('http://localhost:4000/todos/add',newTodo)
+         .then(res => console.log(res.data));
+
+    setDescription("");
+    setResponsible("");
+    setPriority("");
+    setCompleted(false);
   }
   return (
     <>
