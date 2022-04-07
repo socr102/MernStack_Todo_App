@@ -17,7 +17,6 @@ function App() {
           <Route path="/create" element={<CreateTodo/>}/>
         </Routes>
       </Container>
-
     </>
   );
 }
